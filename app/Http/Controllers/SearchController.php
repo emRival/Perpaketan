@@ -13,7 +13,12 @@ class SearchController extends Controller
     {
         $keyword = $request->cari;
         $siswa = Siswa::where('nama_siswa', 'like', "%" . $keyword . "%")->get();
-        $barang = Barang::where('id_siswa', 'like', "%" . $siswa[0]->id . "%")->where('status', 'satpam')->paginate(5);
+        $query = [];
+        foreach ($siswa as $key => $item) {
+            array_push($query, $item->id);
+        }
+        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        // dd($query);
         $kelas = Kelas::all();
 
         return view('tracking.satpam', compact('barang', 'kelas', 'siswa'));
@@ -23,7 +28,13 @@ class SearchController extends Controller
     {
         $keyword = $request->cari;
         $siswa = Siswa::where('nama_siswa', 'like', "%" . $keyword . "%")->get();
-        $barang = Barang::where('id_siswa', 'like', "%" . $siswa[0]->id . "%")->where('status', 'musyrif')->paginate(5);
+        $query = [];
+        foreach ($siswa as $key => $item) {
+            array_push($query, $item->id);
+        }
+        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        // dd($query);
+        
         $kelas = Kelas::all();
         $siswa = Siswa::all();
         return view('tracking.musyrif', compact('barang', 'kelas', 'siswa'));
@@ -33,7 +44,13 @@ class SearchController extends Controller
     {
         $keyword = $request->cari;
         $siswa = Siswa::where('nama_siswa', 'like', "%" . $keyword . "%")->get();
-        $barang = Barang::where('id_siswa', 'like', "%" . $siswa[0]->id . "%")->where('status', 'selesai')->paginate(5);
+        $query = [];
+        foreach ($siswa as $key => $item) {
+            array_push($query, $item->id);
+        }
+        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        // dd($query);
+        
         $kelas = Kelas::all();
         $siswa = Siswa::all();
         return view('tracking.diambil', compact('barang', 'kelas', 'siswa'));
