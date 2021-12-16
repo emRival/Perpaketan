@@ -11,10 +11,10 @@ class LandingController extends Controller
 {
     public function index(Request $request) {
 $i = 1;
-        // $barang1 = Barang::whereIn('status', ['satpam','musyrif'])->paginate(3);
+      
       
         $search = false;
-        $barang = Barang::whereIn('status',  ['satpam','musyrif'])->paginate(10);
+        $barang = Barang::whereIn('status',  ['satpam','musyrif']);
         $barangselesai = Barang::where('status', 'selesai')->where('tanggal_input', date('Y-m-d'))->paginate(10);
         $siswa = Siswa::all();
         $kelas = Kelas::all();
