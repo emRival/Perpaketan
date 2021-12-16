@@ -16,9 +16,7 @@ class KelasController extends Controller
      */
     public function index(Request $request)
     {
-        if(auth()->user()->role !== 'Admin'){
-            abort(403);
-        }
+      
         $keyword = $request->cari;
         $kelas = Kelas::where('nama_kelas', 'like', "%" . $keyword . "%")->paginate(4);
         return view('jurusan.index', compact('kelas'));
