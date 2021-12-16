@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Login Paket IDN
+@endsection
+
 @section('content')
 <div class="container">
     <div class="position-absolute top-50 start-50 translate-middle" style="margin-top: 40px!important;">
@@ -7,8 +11,9 @@
             <div class="shadow  mb-3 bg-white" style="background-color: #0d6efd !important; border-radius: 15px;">
                 
                 
-                    <h2 class="text-center mt-2" style="color: white; font-size: 40px;text-shadow: 2px 2px; ">LOGIN</h2>
-                
+            <a href="/" class="logo">
+                    <img   class="container mt-2 mb-2" src="{{url('atlantis/assets/img/grup1.svg')}}" alt="navbar brand" class="navbar-brand">
+            </a>
             </div>
 
             <div class="container">

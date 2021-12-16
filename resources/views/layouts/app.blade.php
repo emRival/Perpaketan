@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
+    <link rel="icon" href="{{url('atlantis/assets/img/iconku.svg')}}" type="image/x-icon" />
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -25,7 +27,7 @@
     <div id="app">
        
 
-        <main class="py-4">
+        <main class="py-0">
             @yield('content')
         </main>
         

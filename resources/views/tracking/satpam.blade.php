@@ -101,7 +101,7 @@ Pos Satpam
                                                     </td>
                                                     <td>
                                                         <div class="form-button-action">
-
+                                                            @if(Auth::user()->role == 'Admin' || Auth::user()->role == 'Satpam')
                                                             <a data-target="#editbarang{{$row->id}}" data-toggle="modal" data-id="row->id" data-nama_kategori="row->nama_kategori" title="Edit" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                                 <i class="fa fa-edit"></i>
                                                             </a>
@@ -109,7 +109,7 @@ Pos Satpam
                                                             <button data-target="#delbarang{{$row->id}}" data-toggle="modal" title="Delete" class="btn btn-link btn-danger" data-original-title="Remove">
                                                                 <i class="fa fa-times"></i>
                                                             </button>
-
+                                                            @endif
                                                             @include('tracking.modal.delete-barang')
                                                         </div>
                                                     </td>

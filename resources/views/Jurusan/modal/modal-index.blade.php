@@ -9,7 +9,7 @@
 						</button>
 					</div>
 
-					<form method="POST" action="{{route('kelas.store')}}" role="form" enctype="multipart/form-data">
+					<form method="POST" action="{{route('jurusan.store')}}" role="form" enctype="multipart/form-data">
 						@csrf
 
 						<div class="modal-body">

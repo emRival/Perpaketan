@@ -33,9 +33,9 @@
 				@if(Auth::user()->role == 'Admin')
 
 				<li class="nav-item">
-					<a href="{{route('kelas.index')}}">
+					<a href="{{route('jurusan.index')}}">
 						<i class="fas fa-graduation-cap"></i>
-						<p>Kelas</p>
+						<p>Jurusan</p>
 
 					</a>
 				</li>

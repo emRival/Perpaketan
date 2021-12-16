@@ -44,27 +44,22 @@ Route::delete('/del-user/{id}', [UserController::class, 'destroy'])->name('delus
 Route::put('/resetpass/{id}', [UserController::class, 'update'])->name('resetpass')->middleware('Auth');
 
 //DATA SANTRI
-// Route::get('/datasantri', [App\Http\Controllers\SiswaController::class, 'index'])->name('santri.index');
+
 Route::resource('datasantri', SiswaController::class )->middleware('Auth');
 
 //TRACKING PAKET
-// Route::get('/tracking/satpam', [App\Http\Controllers\TrackingController::class, 'satpam'])->name('tracking.satpam');
-// Route::get('/tracking/musyrif', [App\Http\Controllers\TrackingController::class, 'musyrif'])->name('tracking.musyrif');
-// Route::get('/tracking/diambil', [App\Http\Controllers\TrackingController::class, 'diambil'])->name('tracking.diambil');
+
 Route::resource('satpam',SatpamController::class )->middleware('Auth');
 Route::resource('musyrif',MusyrifController::class )->middleware('Auth');
 Route::resource('selesai',SelesaiController::class )->middleware('Auth');
 
 
 //USER
-Route::get('/user/myprofile', [App\Http\Controllers\UserController::class, 'myprofile'])->name('user.myprofile');
 
 
-Route::resource('kelas', KelasController::class)->middleware('Auth');
-Route::resource('jurusan', JurusanController::class)->middleware('Auth');
 
+Route::resource('jurusan', KelasController::class)->middleware('Auth');
 
-Route::get('ajax-autocomplete-search', [SatpamController::class,'selectSearch']);
 
 Route::get('/cari-satpam', [SearchController::class, 'search'])->name('cari.satpam')->middleware('Auth');
 Route::get('/cari-musyrif', [SearchController::class, 'searchmusyrif'])->name('cari.musyrif')->middleware('Auth');

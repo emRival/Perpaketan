@@ -27,11 +27,10 @@ $i = 1;
         $i = 1;
         $search = true;
         $keyword = $request->cari;
-        
-        $barang = Barang::where('nama_barang', 'like', "%" . $keyword . "%")->paginate(7);
-       
         $kelas = Kelas::all();
-        $siswa = Siswa::all();
+        $siswa = Siswa::where('nama_siswa', 'like', "%" . $keyword . "%")->get();
+        $barang = Barang::where('id_siswa', 'like', "%" . $siswa[0]->id . "%")->paginate(5);
+       
         return view('welcome', compact('barang', 'kelas', 'siswa', 'i', 'search'));
     }
 }

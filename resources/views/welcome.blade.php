@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Paket IDN</title>
+    <link rel="icon" href="{{url('atlantis/assets/img/iconku.svg')}}" type="image/x-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="{{asset('atlantis/assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('atlantis/assets/css/atlantis.min.css')}}">
@@ -415,13 +416,15 @@
     @livewireScripts
 </head>
 
-<body class="m-0 h-100">
+<body>
     <nav class="navbar navbar-light bg-light" style="background-color: blue !important;">
-        <a class="navbar-brand">Navbar</a>
 
-        <form class="form-inline container" style="justify-content: end;"  action="{{route('cari-landing')}}">
-            <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search">
-            
+    <a href="/" class="logo">
+		<img   src="{{url('atlantis/assets/img/grup1.svg')}}" alt="navbar brand" class="navbar-brand">
+		</a>
+
+        <form style=" position: absolute; z-index: 1; right: 140px;" action="{{route('cari-landing')}}">
+            <input class="form-control me-2" name="cari" type="search" placeholder="Search" aria-label="Search">
         </form>
         @if (Route::has('login'))
         @auth
@@ -433,6 +436,9 @@
         @endif
         @endauth
         @endif
+
+
+
     </nav>
     <div style="margin-top: 50px;">
         <div class="container">
@@ -451,7 +457,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if($search == true) 
+                        @if($search == true)
                         @foreach($barang as $row)
                         <tr>
                             <th scope="row">{{$i++}}</th>
@@ -527,7 +533,7 @@
 
 
                         @endforeach
-@endif
+                        @endif
 
                     </tbody>
                 </table>
@@ -543,7 +549,7 @@
 
 
 
-    <footer style="margin-top: -120px;">
+    <footer class="translate-middle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#0099ff" fill-opacity="1" d="M0,192L288,32L576,192L864,160L1152,128L1440,0L1440,320L1152,320L864,320L576,320L288,320L0,320Z"></path>
         </svg>

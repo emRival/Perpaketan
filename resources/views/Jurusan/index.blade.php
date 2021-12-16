@@ -40,7 +40,7 @@ Data Jurusan
 									Jurusan
 								</button>
 							</a>
-							@include('kelas.modal.modal-index')
+							@include('jurusan.modal.modal-index')
 						</div>
 					</div>
 					<div class="card-body">
@@ -85,8 +85,8 @@ Data Jurusan
 															<a data-target="#editkelas{{$row->id}}" data-toggle="modal" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
 																<i class="fa fa-edit"></i>
 															</a>
-															@include('kelas.modal.edit-kelas')
-															<form action="{{route('kelas.destroy', $row->id)}}" method="post">
+															@include('jurusan.modal.edit-jurusan')
+															<form action="{{route('jurusan.destroy', $row->id)}}" method="post">
 																@csrf
 																@method('DELETE')
 																<button type="submit" title="Delete"  class="btn btn-link btn-danger" data-original-title="Remove" onclick="return confirm('Hapus Data  {{$row->nama_kelas}}?')">

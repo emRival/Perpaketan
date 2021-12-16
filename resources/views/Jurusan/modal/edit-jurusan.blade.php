@@ -9,7 +9,7 @@
 						</button>
 					</div>
 
-					<form method="POST" action="{{route('kelas.update', $row->id)}}" role="form" enctype="multipart/form-data">
+					<form method="POST" action="{{route('jurusan.update', $row->id)}}" role="form" enctype="multipart/form-data">
 						@csrf
 						@method('PUT')
 

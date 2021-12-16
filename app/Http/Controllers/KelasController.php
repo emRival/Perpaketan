@@ -23,7 +23,7 @@ class KelasController extends Controller
         $kelas = Kelas::where('nama_kelas', 'like', "%" . $keyword . "%")->paginate(4);
         
 
-        return view('kelas.index', compact('kelas'));
+        return view('jurusan.index', compact('kelas'));
     }
 
     /**
@@ -49,7 +49,7 @@ class KelasController extends Controller
         Kelas::create($input);
         Alert::success('Success', "Data Jurusan {$request->nama_kelas} Berhasil Ditambahkan");
 
-        return redirect('/kelas');
+        return redirect('/jurusan');
 
     }
 
@@ -89,7 +89,7 @@ class KelasController extends Controller
 
         $kelas->update($input);
         Alert::info('Success', 'Data Jurusan Berhasil Di update');
-        return redirect('/kelas');
+        return redirect('/jurusan');
     }
 
     /**

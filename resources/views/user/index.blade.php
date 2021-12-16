@@ -90,7 +90,7 @@ Dashboard
 	const dataKelas = <?php echo json_encode($total); ?>;
 	Highcharts.chart('dataWisata', {
 		chart: {
-			type: 'column'
+			type: 'line'
 		},
 		title: {
 			text: 'Grafik Paket IDN'
