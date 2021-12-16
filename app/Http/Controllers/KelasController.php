@@ -18,7 +18,7 @@ class KelasController extends Controller
     {
       
    
-        return view('landing', compact('kelas'));
+        return view('landing');
     }
 
     /**
