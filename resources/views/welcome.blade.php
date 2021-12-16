@@ -417,7 +417,6 @@
 </head>
 
 <body>
-    
     <nav class="navbar navbar-light bg-light" style="background-color: blue !important;">
 
     <a href="/" class="logo">
