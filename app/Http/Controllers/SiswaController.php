@@ -31,7 +31,7 @@ class SiswaController extends Controller
 
     public function update(Request $request, $id)
     {
-        dd($request);
+        
         $input = $request->all();
         $siswa = Siswa::find($id);
 
