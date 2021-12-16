@@ -21,7 +21,7 @@ class KelasController extends Controller
         }
         $keyword = $request->cari;
         $kelas = Kelas::where('nama_kelas', 'like', "%" . $keyword . "%")->paginate(4);
-        return view('jurusan.jurusan', compact('kelas'));
+        return view('landing', compact('kelas'));
     }
 
     /**
