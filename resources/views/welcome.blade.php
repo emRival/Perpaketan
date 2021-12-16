@@ -424,7 +424,7 @@
 		</a>
 
         <form style=" position: absolute; z-index: 1; right: 140px;" action="{{route('cari-landing')}}">
-            <input class="form-control me-2" name="cari" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" required name="cari" type="search" placeholder="Search" aria-label="Search">
         </form>
         @if (Route::has('login'))
         @auth

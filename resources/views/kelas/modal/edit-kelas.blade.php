@@ -17,7 +17,7 @@
 							<div class="form-group">
 								<label>Jurusan</label>
 								<!-- <input type="hidden" class="form-control" id="id" name="id" value=""> -->
-								<input type="text" class="form-control" value="{{$row->nama_kelas}}" name="nama_kelas">
+								<input type="text" required class="form-control" value="{{$row->nama_kelas}}" name="nama_kelas">
 							</div>
 						</div>
 						<!-- /.card-body -->

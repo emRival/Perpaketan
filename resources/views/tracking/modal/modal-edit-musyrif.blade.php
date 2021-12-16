@@ -19,17 +19,17 @@
 					@livewire('dynamic-select',['kelas' =>$row->kelas->id, 'siswa' =>$row->siswa->id])
 					<div class="form-group">
 						<label>Nama Barang</label>
-						<input type="text" class="form-control" value="{{$row->nama_barang}}" name="nama_barang">
+						<input type="text" class="form-control" required value="{{$row->nama_barang}}" name="nama_barang">
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="form-group col-md-6">
 								<label>Ekspedisi</label>
-								<input type="text" class="form-control" value="{{$row->ekspedisi}}" name="ekspedisi">
+								<input type="text" class="form-control" required value="{{$row->ekspedisi}}" name="ekspedisi">
 							</div>
 							<div class="form-group col-md-6">
 								<label>Status</label>
-								<select class="form-control" name="status">
+								<select class="form-control" required name="status">
 									<option value="{{$row->status}}">@if ($row->status == 'satpam' )
 														<span>POS SATPAM</span>
 														@elseif ($row->status == 'musyrif')

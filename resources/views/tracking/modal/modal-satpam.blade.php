@@ -17,18 +17,18 @@
 					<div class="form-group">
 						<label>Nama Barang</label>
 
-						<input type="text" class="form-control" name="nama_barang">
+						<input type="text" required class="form-control" name="nama_barang">
 					</div>
 					<div class="container">
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label>Ekspedisi</label>
 
-							<input type="text" class="form-control" name="ekspedisi">
+							<input type="text" required class="form-control" name="ekspedisi">
 						</div>
 						<div class=" form-group col-md-6">
 							<label>Status</label>
-							<select class="form-control" id="status" name="status">
+							<select class="form-control" required id="status" name="status">
 								<option value="">-- Pilih Status --</option>
 								<option value="satpam">POS SATPAM</option>
 								<option value="musyrif">RUANG MUSYRIF</option>

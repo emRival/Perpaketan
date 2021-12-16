@@ -17,7 +17,7 @@
 				<div class="modal-body" style="text-align: left !important;">
 					<div class="form-group">
 						<label>Kelas</label>
-						<select name="id_kelas" class="form-control">
+						<select name="id_kelas" required class="form-control">
 							<option value="{{ $row->id_kelas }}">{{ $row->kelas->nama_kelas }}</option>
 							@foreach ($kelas as $k)
 							<option value="{{ $k->id }}">{{ $k->nama_kelas }}</option>
@@ -27,7 +27,7 @@
 					<div class="form-group">
 						<label>Nama</label>
 						
-						<input type="text" value="{{$row->nama_siswa}}"   name="nama_siswa"  placeholder="Update" class="form-control">
+						<input type="text" value="{{$row->nama_siswa}}" required  name="nama_siswa"  placeholder="Update" class="form-control">
 					
 					</div>
 

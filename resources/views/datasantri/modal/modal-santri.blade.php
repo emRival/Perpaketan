@@ -15,7 +15,7 @@
 							<div class="form-group">
 								<label>Jurusan</label>
                                 
-								<select name="id_kelas" required="required" class="form-control">
+								<select name="id_kelas" required class="form-control">
                                 <option value="">-- PILIH Jurusan --</option>
                                 @foreach($kelas as $row)
                                 <option value="{{$row->id}}">{{$row->nama_kelas}}</option>
@@ -24,7 +24,7 @@
 							</div>
                             <div class="form-group">
 								<label>Nama (Kelas)</label>
-								<input type="text" class="form-control" value="{{old('nama_siswa')}}" name="nama_siswa">
+								<input type="text" class="form-control" required value="{{old('nama_siswa')}}" name="nama_siswa">
 							</div>
 							<div class="form-grup container">
                          <label style="color: red !important;">Format = <span style="color: green !important;" >

@@ -16,7 +16,7 @@
 							<div class="form-group">
 								<label>Jurusan</label>
                                 
-								<input type="text" class="form-control"  name="nama_kelas">
+								<input type="text" required class="form-control"  name="nama_kelas">
 							</div>
 						</div>
 						<!-- /.card-body -->

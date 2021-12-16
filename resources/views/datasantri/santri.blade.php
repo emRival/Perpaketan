@@ -54,7 +54,7 @@ Data Santri
 										<form class="form" method="get" action="#">
 											<div id="add-row_filter" class="dataTables_filter">
 												<label>Search:</label>
-												<input type="text" name="cari" class="form-control form-control-sm" placeholder="" aria-controls="add-row">
+												<input type="text" name="cari" required class="form-control form-control-sm" placeholder="" aria-controls="add-row">
 												<button type="submit" class="btn btn-info btn-sm">Cari</button>
 											</div>
 										</form>
