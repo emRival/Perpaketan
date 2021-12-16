@@ -14,7 +14,7 @@ $i = 1;
       
       
         $search = false;
-        $barang = Barang::whereIn('status',  ['satpam','musyrif']);
+        $barang = Barang::whereIn('status',  ['satpam','musyrif'])->paginate(10);
         $barangselesai = Barang::where('status', 'selesai')->where('tanggal_input', date('Y-m-d'))->paginate(10);
         $siswa = Siswa::all();
         $kelas = Kelas::all();
