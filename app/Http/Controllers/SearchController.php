@@ -32,7 +32,7 @@ class SearchController extends Controller
         foreach ($siswa as $key => $item) {
             array_push($query, $item->id);
         }
-        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'musyrif')->paginate(5);
         // dd($query);
         
         $kelas = Kelas::all();
@@ -48,7 +48,7 @@ class SearchController extends Controller
         foreach ($siswa as $key => $item) {
             array_push($query, $item->id);
         }
-        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'selesai')->paginate(5);
         // dd($query);
         
         $kelas = Kelas::all();
