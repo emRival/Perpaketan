@@ -36,7 +36,7 @@ class SiswaController extends Controller
         $siswa = Siswa::find($id);
 
         $siswa->update($input);
-        Alert::info('Success', 'Data Kelas Berhasil Di update');
+        Alert::info('Success', "Data {$siswa->nama_siswa} Berhasil Di update");
         return redirect('/datasantri');
     }
 

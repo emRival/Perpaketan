@@ -33,7 +33,7 @@ $i = 1;
         foreach ($siswa as $key => $item) {
             array_push($query, $item->id);
         }
-        $barang = Barang::whereIn('id_siswa', $query)->where('status', 'satpam')->paginate(5);
+        $barang = Barang::whereIn('id_siswa', $query)->paginate(5);
         // dd($query);
         
        
