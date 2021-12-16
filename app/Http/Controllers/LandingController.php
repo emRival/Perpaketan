@@ -12,12 +12,12 @@ class LandingController extends Controller
     public function index(Request $request) {
 $i = 1;
       
-      
+$siswa = Siswa::all();
+$kelas = Kelas::all();
         $search = false;
         $barang = Barang::whereIn('status',  ['satpam','musyrif']);
         $barangselesai = Barang::where('status', 'selesai')->where('tanggal_input', date('Y-m-d'));
-        $siswa = Siswa::all();
-        $kelas = Kelas::all();
+        
         return view('welcome', compact('barang','barangselesai', 'siswa', 'kelas', 'i', 'search'));
     }
 
